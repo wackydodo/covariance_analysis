@@ -1,6 +1,6 @@
 import csv
 
-with open('csv_test.csv', 'wb') as csvfile:
+with open('csv_test.csv', 'w') as csvfile:
 
 	writer = csv.writer(csvfile)
 	writer.writerow([1, 2, 3])
