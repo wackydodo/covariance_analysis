@@ -7,3 +7,4 @@ with open('csv_test.csv', 'w') as csvfile:
 
 	data = [(1,3,4)]
 	writer.writerows(data)
+print ('File created')
