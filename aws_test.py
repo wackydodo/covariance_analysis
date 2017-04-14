@@ -1,7 +1,7 @@
 import csv
 
 
-csvfile = file('csv_test.csv', 'wb')
+csvfile = open('csv_test.csv', 'wb')
 writer = csv.writer(csvfile)
 writer.writerow(['a', 'b', 'c'])
 
