@@ -4,6 +4,7 @@ import math
 import functools
 pd.set_eng_float_format(accuracy=3, use_eng_prefix=False)
 import multiprocessing as mp
+import timeit
 
 
 class Covariance(object):
@@ -91,6 +92,7 @@ class Covariance(object):
 
 
 if __name__ == '__main__':
+    start = timeit.default_timer()
     data = pd.read_csv('raw_data.csv', index_col=0)
     test = Covariance(data.dropna())
     print(test.covariance())
@@ -108,3 +110,7 @@ if __name__ == '__main__':
             temp.append(likehood)
         value_likehood.append(temp)
     print('finished')
+
+    stop = timeit.default_timer()
+
+    print ('running time；', stop - start) 
