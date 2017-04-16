@@ -113,4 +113,4 @@ if __name__ == '__main__':
 
     stop = timeit.default_timer()
 
-    print ('running time；', stop - start) 
+    print ('running time: ', stop - start) 
