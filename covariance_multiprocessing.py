@@ -99,7 +99,7 @@ class Covariance(object):
 
 
 if __name__ == '__main__':
-    data = pd.read_csv('C:\\Users\\ll299\\PycharmProjects\\covariance_estimate\\data\\raw_data.csv', index_col=0)
+    data = pd.read_csv('raw_data.csv', index_col=0)
     start = time.time()
 
     test = Covariance(data.dropna())
