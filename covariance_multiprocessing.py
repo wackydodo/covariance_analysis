@@ -104,22 +104,22 @@ if __name__ == '__main__':
 
     test = Covariance(data.dropna())
 
-    print(test.covariance())
-    N_cov_mat = test.rolling_covariance(corr_decay=0.1, vol_decay=0.1)
-    print(N_cov_mat)
+    # print(test.covariance())
+    # N_cov_mat = test.rolling_covariance(corr_decay=0.1, vol_decay=0.1)
+    # print(N_cov_mat)
 
 
 
-    # decay = list(np.arange(0,0.1,0.01))
-    # lag = list(np.arange(0, 3))
-    # value_likehood = []
-    # for i in decay:
-    #     temp = []
-    #     for j in lag:
-    #         likehood = test.log_likehood(corr_decay=i, vol_decay=i, lag=j)
-    #         temp.append(likehood)
-    #     value_likehood.append(temp)
-    # print(value_likehood)
+    decay = list(np.arange(0,0.1,0.01))
+    lag = list(np.arange(0, 3))
+    value_likehood = []
+    for i in decay:
+        temp = []
+        for j in lag:
+            likehood = test.log_likehood(corr_decay=i, vol_decay=i, lag=j)
+            temp.append(likehood)
+        value_likehood.append(temp)
+    print(value_likehood)
 
     end = time.time()
     print('finished, time = ', end - start)
