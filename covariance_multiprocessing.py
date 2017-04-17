@@ -66,7 +66,7 @@ class Covariance(object):
             raise ValueError('Not enough data')
         else:
             p_covariance = functools.partial(self._covariance, corr_decay=corr_decay ,vol_decay=vol_decay ,horizon = horizon)
-            p = mp.Pool(3)
+            p = mp.Pool(31)
             c_g_matrix = self.generator_matrix(max_day, min_day)
             cov = p.map(p_covariance, c_g_matrix)
             p.close()
